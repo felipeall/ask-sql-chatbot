@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "ask-sql"
+version = "0.1.0"
+description = "Translate questions to your database into SQL queries via OpenAI"
+authors = ["Felipe Allegretti <felipe@allegretti.me>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.9"
+openai = "^0.28.0"
+sqlalchemy = "^2.0.20"
+gradio = "^3.44.3"
+psycopg2-binary = "^2.9.7"
+pydantic-settings = "^2.0.3"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.9.1"
+ruff = "^0.0.290"
+
+[tool.black]
+line-length = 120
+verbose = true
+preview = true
+
+[tool.ruff]
+line-length = 120
+select = [
+    "F",  # pyflakes
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "I",  # isort
+    "N",  # pep8-naming
+    "COM",  # flake8-commas
+    "Q",  # flake8-quotes
+]
